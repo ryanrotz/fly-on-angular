@@ -1,0 +1,17 @@
+<h1>I'm an airplane</h1>
+
+  <div>
+  <form ng-submit="add()">
+    <input type="text" ng-model="airplane.manufacturer">
+    <input type="text" ng-model="airplane.model">
+    <input type="text" ng-model="airplane.engines">
+    <input type="submit">
+  </form>
+
+    <div ng-repeat="airplane in airplanes track by airplane._id">
+      <h2>{{airplane.manufacturer}}</h2>
+      <p>{{airplane.model}}</p>
+      <p>{{airplane.engines}}</p>
+      <button ng-click="delete(airplane._id, $index)">delete</button>
+    </div>
+    </div>
